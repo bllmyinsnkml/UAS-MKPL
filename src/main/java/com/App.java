@@ -36,9 +36,9 @@ public class App {
         		{
         			if(args[1].equalsIgnoreCase("warn"))
         				PropertyConfigurator.configure(Loader.getResource("log4j-warn.properties"));
-        			else if(args[1].equalsIgnoreCase("debug"))
+        			else if(args[1].equalsIgnoreCase("warn"))
         				PropertyConfigurator.configure(Loader.getResource("log4j-debug.properties"));
-        			else if(args[1].equalsIgnoreCase("info"))
+        			else if(args[1].equalsIgnoreCase("warn"))
         				PropertyConfigurator.configure(Loader.getResource("log4j-info.properties"));
         			else
         				PropertyConfigurator.configure(Loader.getResource("log4j-debug.properties"));
@@ -55,12 +55,12 @@ public class App {
     	}    	
     	catch(ArithmeticException ae)
     	{    		
-    		logger.error("Error : "+ae);
+    		logger.error("Error Count: "+ae);
     		System.out.println("Number is divide by zero. Please check your expression");
     	}
     	catch(Exception e)
     	{
-    		logger.error("Error : "+e);
+    		logger.error("Error Count: "+e);
     	}
     }
     
